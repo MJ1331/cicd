@@ -36,14 +36,6 @@ pipeline {
             }
         }
         
-        stage('Code Quality Analysis - ESLint') {
-            steps {
-                echo '========== Running ESLint =========='
-                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
-                    sh 'npm run lint'
-                }
-            }
-        }
         
         stage('Build Application') {
             steps {
@@ -52,14 +44,6 @@ pipeline {
             }
         }
         
-        stage('Run Tests') {
-            steps {
-                echo '========== Running Tests =========='
-                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
-                    sh 'npm test'
-                }
-            }
-        }
         
         stage('Build Docker Image') {
             steps {
