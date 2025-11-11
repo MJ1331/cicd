@@ -6,10 +6,10 @@ pipeline {
     }
     
     environment {
-        GCP_PROJECT_ID = 'artisan-project-472013'  // Replace with your GCP project ID
+        GCP_PROJECT_ID = 'devopscicd-477903'  
         GCP_REGION = 'us-central1'  // Replace with your region
         ARTIFACT_REGISTRY = "${GCP_REGION}-docker.pkg.dev"
-        REPOSITORY_NAME = 'devops-cia2-repo-sheraz'
+        REPOSITORY_NAME = 'junaidh-cia2-repo'
         IMAGE_NAME = 'devops-app'
         IMAGE_TAG = "${BUILD_NUMBER}"
         FULL_IMAGE_PATH = "${ARTIFACT_REGISTRY}/${GCP_PROJECT_ID}/${REPOSITORY_NAME}/${IMAGE_NAME}"
@@ -237,7 +237,7 @@ pipeline {
                             </body>
                             </html>
                         """,
-                        to: 'mdsheraz102@gmail.com',
+                        to: 'md.junaidh09@gmail.com',
                         mimeType: 'text/html',
                         from: EMAIL_USER,
                         replyTo: EMAIL_USER
@@ -303,7 +303,7 @@ pipeline {
                             </body>
                             </html>
                         """,
-                        to: 'mdsheraz102@gmail.com',
+                        to: 'md.junaidh09@gmail.com',
                         mimeType: 'text/html',
                         from: EMAIL_USER,
                         replyTo: EMAIL_USER
